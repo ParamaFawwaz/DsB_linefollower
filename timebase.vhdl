@@ -9,3 +9,10 @@ entity timebase is
 		count_out	: out	std_logic_vector (1000000 downto 0)  -- 20ms/20ns = 10^6
 	);
 end entity timebase;
+
+architecture structural of timebase is
+	process (clk)
+		variable 
+	begin
+		if(clk'event and clk = '1') then
+			
