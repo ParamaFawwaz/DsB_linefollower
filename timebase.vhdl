@@ -32,3 +32,5 @@ begin
 count_out <= count;
 
 end architecture behavioural; 
+
+--test
