@@ -10,9 +10,25 @@ entity timebase is
 	);
 end entity timebase;
 
-architecture structural of timebase is
-	process (clk)
-		variable 
+architecture behavioural of timebase is
+	signal count : std_logic_vector(1000000 downto 0);
+	signal next_count : std_logic_vector(1000000 downto 0);
+begin
+	process (clk) -- register
 	begin
 		if(clk'event and clk = '1') then
-			
+			if(reset = '1') then
+				count <= '0';
+			else
+				count <= next_count;
+			end if;
+		end if;
+	end process;
+
+	process(count)
+	begin 
+		next_count = count + '1';
+	end process;
+count_out <= count;
+
+end architecture behavioural; 
