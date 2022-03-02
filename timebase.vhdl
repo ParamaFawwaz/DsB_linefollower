@@ -7,13 +7,13 @@ entity timebase is
 	port (	clk		: in	std_logic; -- every 20ns
 		reset		: in	std_logic; -- reset every 20 ms
 
-		count_out	: out	std_logic_vector (1000000 downto 0)  -- 20ms/20ns = 10^6
+		count_out	: out	std_logic_vector (20 downto 0)  -- 20ms/20ns = 10^6
 	);
 end entity timebase;
 
 architecture behavioural of timebase is
-	signal count : unsigned(1000000 downto 0);
-	signal next_count : unsigned(1000000 downto 0);
+	signal count : unsigned(20 downto 0);
+	signal next_count : unsigned(20 downto 0);
 begin
 	process (clk) -- register
 	begin
