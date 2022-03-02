@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/schoolprogramfiles/git/linefollower
+Etimebase
+w1646205688
+DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+8D:/schoolprogramfiles/git/linefollower/timebase.vhdl
+FD:/schoolprogramfiles/git/linefollower/timebase.vhdl
+l0
+L6
+V<zbGa2A?RTZQEBL4NoOoM3
+!s100 ^8mF?IDhNk<?fMW;0IG7h2
+OL;C;10.6g;65
+32
+!s110 1646205700
+!i10b 1
+!s108 1646205700.000000
+!s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
+!s107 D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
+!i113 0
+o-work work
+tExplicit 1 CvgOpt 0
