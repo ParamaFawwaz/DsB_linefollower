@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/schoolprogramfiles/git/linefollower
 Etestbench
-Z1 w1646209101
+Z1 w1646210587
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,34 +21,34 @@ VCmHboV_Wbzdiez^ZC;QiL3
 !s100 NaNUGQOUoO6LLI=3hH9@h2
 Z6 OL;C;10.6g;65
 32
-Z7 !s110 1646209109
+Z7 !s110 1646210651
 !i10b 1
-Z8 !s108 1646209109.000000
+Z8 !s108 1646210651.000000
 Z9 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
-!s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+Z10 !s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
 !i113 0
-Z10 o-work work
-Z11 tExplicit 1 CvgOpt 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
 Astructural
 R2
 R3
 DEx4 work 9 testbench 0 22 CmHboV_Wbzdiez^ZC;QiL3
-l19
-L7
-VCS3G:BmS=]6@<A:P38DaG3
-!s100 ^m8XSjN5O5]3MLjE^YjUT2
-R6
 32
 R7
+l19
+L7
+V4IV69ag[icm8JGbg<2lS[3
+!s100 JOj9]ilRc5RGEAE2^Xj[N1
+R6
 !i10b 1
 R8
 R9
-Z12 !s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
-!i113 0
 R10
+!i113 0
 R11
+R12
 Etimebase
-Z13 w1646208652
+Z13 w1646210601
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
@@ -57,34 +57,34 @@ Z15 8D:/schoolprogramfiles/git/linefollower/timebase.vhdl
 Z16 FD:/schoolprogramfiles/git/linefollower/timebase.vhdl
 l0
 L6
-V<zbGa2A?RTZQEBL4NoOoM3
-!s100 ^8mF?IDhNk<?fMW;0IG7h2
+VD@l]7<[o]C6BEcB9O;58V2
+!s100 :[zUzRD4RKznAL0HNUVb`3
 R6
 32
-Z17 !s110 1646208659
+Z17 !s110 1646210649
 !i10b 1
-Z18 !s108 1646208659.000000
+Z18 !s108 1646210649.000000
 Z19 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
 Z20 !s107 D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
 !i113 0
-R10
 R11
+R12
 Abehavioural
 R14
 R2
 R3
-DEx4 work 8 timebase 0 22 <zbGa2A?RTZQEBL4NoOoM3
-l17
-L14
-V=0afVc5hHoA7BZXRISk3B2
-!s100 BJgjMH4Zl`;FimE1:A;Q92
-R6
+DEx4 work 8 timebase 0 22 D@l]7<[o]C6BEcB9O;58V2
 32
 R17
+l17
+L14
+VM38:<aE5CG>9A^F2iCh[M2
+!s100 IM6z;j@ndm8@>[6D]7<hz3
+R6
 !i10b 1
 R18
 R19
 R20
 !i113 0
-R10
 R11
+R12
