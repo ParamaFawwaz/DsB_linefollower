@@ -1,6 +1,6 @@
 library IEEE;
-use ieee.std_logic_1164.all
-use ieee.numeric_std.all
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity motorcontrol is
 	port (	clk		: in	std_logic;
@@ -20,18 +20,45 @@ architecture behavioral of motorcontrol is
 	begin
 
 		-- need to make process that changes state (see manual)
+		-- on it! -Parama :)
 
-	process(state)
+	process(state, direction, reset)
 	begin
 		case state is
-			when  reset_state=> 
-				pwm <= '0';
+			when  reset_state=>
+			pwm <= '0';
+				if  (reset = '1') then 
+					new_state <= reset_state;
+				elsif (direction = '1' and reset = '0') then
+					new_state <= clockwise_state;
+				else
+					new_state <= clockwise_state;
+				end if;
+
+				
 			when  clockwise_state=>
 				pwm <= '1' after 0 ms,
 				pwm <= '0' after 1 ms;
+				
+				if  (reset = '1') then 
+					new_state <= reset_state;
+				elsif (direction = '1' and reset = '0') then
+					new_state <= clockwise_state;
+				else 
+					new_state <= clockwise_state;
+				end if;
+
 			when  anticlockwise_state=>
 				pwm <= '1' after 1 ms,
 				pwm <= '0' after 2 ms;
+
+				if  (reset = '1') then 
+					new_state <= reset_state;
+				elsif (direction = '1' and reset = '0') then
+					new_state <= clockwise_state;
+				else 
+					new_state <= clockwise_state;
+				end if;
 		end case;
 	end process;
 end architecture behavioral;

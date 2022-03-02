@@ -8,48 +8,70 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/schoolprogramfiles/git/linefollower
-Etestbench
-Z1 w1646210587
+Emotorcontrol
+w1646241335
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
-Z5 FD:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
+8D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl
+FD:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl
+l0
+L5
+VjLa<4_1]0:8]k[03SLiCm0
+!s100 J]3YP4@QAI1T3<kE=m6Za1
+Z4 OL;C;10.6g;65
+32
+!s110 1646241342
+!i10b 1
+!s108 1646241342.000000
+!s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl|
+!s107 D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl|
+!i113 0
+Z5 o-work work
+Z6 tExplicit 1 CvgOpt 0
+Etestbench
+Z7 w1646210587
+R2
+R3
+R0
+Z8 8D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
+Z9 FD:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
 l0
 L4
 VCmHboV_Wbzdiez^ZC;QiL3
 !s100 NaNUGQOUoO6LLI=3hH9@h2
-Z6 OL;C;10.6g;65
+R4
 32
-Z7 !s110 1646210651
+Z10 !s110 1646210651
 !i10b 1
-Z8 !s108 1646210651.000000
-Z9 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
-Z10 !s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+Z11 !s108 1646210651.000000
+Z12 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+Z13 !s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
 !i113 0
-Z11 o-work work
-Z12 tExplicit 1 CvgOpt 0
+R5
+R6
 Astructural
 R2
 R3
 DEx4 work 9 testbench 0 22 CmHboV_Wbzdiez^ZC;QiL3
 32
-R7
+R10
 l19
 L7
 V4IV69ag[icm8JGbg<2lS[3
 !s100 JOj9]ilRc5RGEAE2^Xj[N1
-R6
+R4
 !i10b 1
-R8
-R9
-R10
-!i113 0
 R11
 R12
+R13
+!i113 0
+R5
+R6
 Etimebase
-Z13 w1646210601
-Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z14 w1646210601
+R1
 R2
 R3
 R0
@@ -59,7 +81,7 @@ l0
 L6
 VD@l]7<[o]C6BEcB9O;58V2
 !s100 :[zUzRD4RKznAL0HNUVb`3
-R6
+R4
 32
 Z17 !s110 1646210649
 !i10b 1
@@ -67,10 +89,10 @@ Z18 !s108 1646210649.000000
 Z19 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
 Z20 !s107 D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
 !i113 0
-R11
-R12
+R5
+R6
 Abehavioural
-R14
+R1
 R2
 R3
 DEx4 work 8 timebase 0 22 D@l]7<[o]C6BEcB9O;58V2
@@ -80,11 +102,11 @@ l17
 L14
 VM38:<aE5CG>9A^F2iCh[M2
 !s100 IM6z;j@ndm8@>[6D]7<hz3
-R6
+R4
 !i10b 1
 R18
 R19
 R20
 !i113 0
-R11
-R12
+R5
+R6
