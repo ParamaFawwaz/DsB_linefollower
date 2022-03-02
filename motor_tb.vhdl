@@ -10,7 +10,7 @@ architecture structural of motor_tb is
 		port (	clk			: in	std_logic;
 			reset			: in	std_logic;
 
-			count_out		: out	std_logic_vector (? downto 0)
+			count_out		: out	std_logic_vector (20 downto 0)
 		);
 	end component timebase;
 
@@ -18,14 +18,14 @@ architecture structural of motor_tb is
 		port (	clk			: in	std_logic;
 			reset			: in	std_logic;
 			direction		: in	std_logic;
-			count_in		: in	std_logic_vector (? downto 0);
+			count_in		: in	std_logic_vector (20 downto 0);
 
 			pwm			: out	std_logic
 		);
 	end component motorcontrol;
 
 	signal	clk, reset, direction		: std_logic;
-	signal	count				: std_logic_vector (? downto 0);
+	signal	count				: std_logic_vector (20 downto 0);
 	signal	pwm				: std_logic;
 
 begin

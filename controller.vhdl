@@ -10,7 +10,7 @@ entity controller is
 		sensor_m		: in	std_logic;
 		sensor_r		: in	std_logic;
 
-		count_in		: in	std_logic_vector (?? downto 0);  -- Please enter upper bound
+		count_in		: in	std_logic_vector (20 downto 0);  -- Please enter upper bound
 		count_reset		: out	std_logic;
 
 		motor_l_reset		: out	std_logic;
