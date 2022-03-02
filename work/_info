@@ -8,25 +8,83 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/schoolprogramfiles/git/linefollower
-Etimebase
-w1646205688
-DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Etestbench
+Z1 w1646209101
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-8D:/schoolprogramfiles/git/linefollower/timebase.vhdl
-FD:/schoolprogramfiles/git/linefollower/timebase.vhdl
+Z4 8D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
+Z5 FD:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl
+l0
+L4
+VCmHboV_Wbzdiez^ZC;QiL3
+!s100 NaNUGQOUoO6LLI=3hH9@h2
+Z6 OL;C;10.6g;65
+32
+Z7 !s110 1646209109
+!i10b 1
+Z8 !s108 1646209109.000000
+Z9 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+!s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+!i113 0
+Z10 o-work work
+Z11 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 9 testbench 0 22 CmHboV_Wbzdiez^ZC;QiL3
+l19
+L7
+VCS3G:BmS=]6@<A:P38DaG3
+!s100 ^m8XSjN5O5]3MLjE^YjUT2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 D:/schoolprogramfiles/git/linefollower/timebase_tb.vhdl|
+!i113 0
+R10
+R11
+Etimebase
+Z13 w1646208652
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z15 8D:/schoolprogramfiles/git/linefollower/timebase.vhdl
+Z16 FD:/schoolprogramfiles/git/linefollower/timebase.vhdl
 l0
 L6
 V<zbGa2A?RTZQEBL4NoOoM3
 !s100 ^8mF?IDhNk<?fMW;0IG7h2
-OL;C;10.6g;65
+R6
 32
-!s110 1646205700
+Z17 !s110 1646208659
 !i10b 1
-!s108 1646205700.000000
-!s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
-!s107 D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
+Z18 !s108 1646208659.000000
+Z19 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
+Z20 !s107 D:/schoolprogramfiles/git/linefollower/timebase.vhdl|
 !i113 0
-o-work work
-tExplicit 1 CvgOpt 0
+R10
+R11
+Abehavioural
+R14
+R2
+R3
+DEx4 work 8 timebase 0 22 <zbGa2A?RTZQEBL4NoOoM3
+l17
+L14
+V=0afVc5hHoA7BZXRISk3B2
+!s100 BJgjMH4Zl`;FimE1:A;Q92
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R10
+R11

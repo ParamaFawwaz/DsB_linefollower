@@ -19,7 +19,7 @@ begin
 	begin
 		if(clk'event and clk = '1') then
 			if(reset = '1') then
-				count <= '0';
+				count <= (others=> '0');
 			else
 				count <= next_count;
 			end if;
@@ -28,7 +28,7 @@ begin
 
 	process(count)
 	begin 
-		next_count = count + '1';
+		next_count <= count + 1;
 	end process;
 count_out <= std_logic_vector(count);
 
