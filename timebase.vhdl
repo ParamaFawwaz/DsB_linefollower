@@ -12,8 +12,8 @@ entity timebase is
 end entity timebase;
 
 architecture behavioural of timebase is
-	signal count : std_logic_vector(1000000 downto 0);
-	signal next_count : std_logic_vector(1000000 downto 0);
+	signal count : unsigned(1000000 downto 0);
+	signal next_count : unsigned(1000000 downto 0);
 begin
 	process (clk) -- register
 	begin
@@ -30,6 +30,6 @@ begin
 	begin 
 		next_count = count + '1';
 	end process;
-count_out <= count;
+count_out <= std_logic_vector(count);
 
 end architecture behavioural; 
