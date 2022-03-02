@@ -22,7 +22,12 @@ architecture behavioral of motorcontrol is
 	begin
 		case state is
 			when "00" => 
+				pwm <= '0';
 			when '01' =>
+				pwm <= '1' after 0 ms,
+				pwm <= '0' after 1 ms;
 			when '10'=>
+				pwm <= '1' after 1 ms,
+				pwm <= '0' after 2 ms;
 			
 			
