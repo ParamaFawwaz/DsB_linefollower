@@ -14,20 +14,24 @@ end entity motorcontrol;
 
 architecture behavioral of motorcontrol is
 	
-	type
-	signal state, new_state: std_logic_vector (2 downto 0);
+	type motor_state is (reset_state, clockwise_state, anticlockwise_state);
+
+	signal state, new_state: motor_state;
 
 	begin
 	process(state, direction)
 	begin
 		case state is
-			when "00" => 
+			when  reset_state=> 
 				pwm <= '0';
-			when '01' =>
+			when  clockwise_state=>
 				pwm <= '1' after 0 ms,
 				pwm <= '0' after 1 ms;
-			when '10'=>
+			when  anticlockwise_state=>
 				pwm <= '1' after 1 ms,
 				pwm <= '0' after 2 ms;
+		end case;
+	end process;
+end architecture behavioral;
 			
 			
