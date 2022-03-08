@@ -23,42 +23,33 @@ architecture behavioral of motorcontrol is
 		-- on it! -Parama :)
 
 	process(state, direction, reset)
+		procedure state_manipulation(
+			signal reset : in;
+			signal set_state_to : in)
+		begin
+			if (reset = '1') then
+				new_state <= reset_state;
+			else
+				new_state <= set_state_to;
+			end if;
+		end procedure;
 	begin
 		case state is
 			when  reset_state=>
 			pwm <= '0';
-				if  (reset = '1') then 
-					new_state <= reset_state;
-				elsif (direction = '1' and reset = '0') then
-					new_state <= clockwise_state;
-				else
-					new_state <= clockwise_state;
-				end if;
-
+				state_manipulation(reset, clockwise_state);
 				
 			when  clockwise_state=>
 				pwm <= '1' after 0 ms,
 				pwm <= '0' after 1 ms;
 				
-				if  (reset = '1') then 
-					new_state <= reset_state;
-				elsif (direction = '1' and reset = '0') then
-					new_state <= clockwise_state;
-				else 
-					new_state <= clockwise_state;
-				end if;
+				state_mainupulation(reset, clockwise_state);
 
 			when  anticlockwise_state=>
 				pwm <= '1' after 1 ms,
 				pwm <= '0' after 2 ms;
 
-				if  (reset = '1') then 
-					new_state <= reset_state;
-				elsif (direction = '1' and reset = '0') then
-					new_state <= clockwise_state;
-				else 
-					new_state <= clockwise_state;
-				end if;
+				state_manipulation(reset, anticlockwise_state);
 		end case;
 	end process;
 end architecture behavioral;
