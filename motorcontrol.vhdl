@@ -19,9 +19,6 @@ architecture behavioral of motorcontrol is
 	signal state, new_state: motor_state;
 	begin
 
-		-- need to make process that changes state (see manual)
-		-- on it! -Parama :)
-
 	process(state, direction, reset)
 		procedure state_manipulation(
 			signal reset : in;
