@@ -1,10 +1,20 @@
-{C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl}
+{C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer_tb.vhdl} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\Paul\Documents\BSc EE\EE1D21\EE1D21 Line Follower\LineFollowerGit\buffer_tb.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity testbench
--- Compiling architecture structural of testbench
+-- Compiling entity buffer_tb
+-- Compiling architecture structural of buffer_tb
+** Error: C:\Users\Paul\Documents\BSc EE\EE1D21\EE1D21 Line Follower\LineFollowerGit\buffer_tb.vhdl(9): near "buffer": (vcom-1576) expecting IDENTIFIER.
+
+} {8.0 9.0} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity knightrider
+-- Compiling architecture behavioural of knightrider
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -14,14 +24,13 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity robot_tb
 -- Compiling architecture structural of robot_tb
 
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl}
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity knightrider
--- Compiling architecture behavioural of knightrider
+-- Compiling entity testbench
+-- Compiling architecture structural of testbench
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -40,12 +49,21 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 ** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl(20): (vcom-1136) Unknown identifier "std_logic".
 ** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl(22): VHDL Compiler exiting
 
-} {5.0 17.0} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl}
+} {5.0 17.0} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity robot
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl(4): near "buffer": (vcom-1576) expecting IDENTIFIER.
+
+} {6.0 7.0} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity timebase
+-- Compiling architecture behavioural of timebase
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -63,5 +81,12 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package std_logic_1164
 -- Compiling entity motor_tb
 -- Compiling architecture structural of motor_tb
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity robot
 
 } {} {}}

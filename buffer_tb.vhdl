@@ -5,6 +5,7 @@ entity buffer_tb is
 end entity buffer_tb;
 
 architecture structural of buffer_tb is
+    
     component buffer is
         port(clk : in std_logic;
         sensor_L_in : in std_logic;
