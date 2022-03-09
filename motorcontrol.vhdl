@@ -6,7 +6,7 @@ entity motorcontrol is
 	port (	clk		: in	std_logic;
 		reset		: in	std_logic;
 		direction	: in	std_logic;
-		count_in	: in	std_logic_vector (20 downto 0);
+		count_in	: in	std_logic_vector (19 downto 0);
 
 		pwm		: out	std_logic
 	);
@@ -14,7 +14,7 @@ end entity motorcontrol;
 
 architecture behavioral of motorcontrol is
 	
-	type motor_state is (reset_state, clockwise_state, anticlockwise_state);
+	type motor_state is (reset_state, forward_state, backward_state);
 
 	signal state, new_state: motor_state;
 	begin
@@ -37,19 +37,19 @@ architecture behavioral of motorcontrol is
 		case state is
 			when  reset_state=>
 			pwm <= '0';
-				state_manipulation(reset, clockwise_state);
+				state_manipulation(reset, forward_stte);
 				
-			when  clockwise_state=>
+			when  forward_state=>
 				pwm <= '1' after 0 ms,
 				pwm <= '0' after 1 ms;
 				
-				state_mainupulation(reset, clockwise_state);
+				state_mainupulation(reset, forward_state);
 
-			when  anticlockwise_state=>
+			when  backward_state=>
 				pwm <= '1' after 1 ms,
 				pwm <= '0' after 2 ms;
 
-				state_manipulation(reset, anticlockwise_state);
+				state_manipulation(reset, backward_state);
 		end case;
 	end process;
 end architecture behavioral;
