@@ -29,7 +29,8 @@ architecture behavioral of motorcontrol is
 			end if;
 		end process;
 	
-	process (state, direction)
+	process (state, direction, clk)
+		variable delay : integer;
 	begin
 		case state is
 			when Reset_state =>
@@ -43,16 +44,16 @@ architecture behavioral of motorcontrol is
 				pwm <= '1';
 
 				if (direction = '1') then
-					if (to_integer(unsigned(count_in)) <= 50000) then
-					new_state <= high;
+					if (to_integer(unsigned(count_in)) < 50000) then
+						new_state <= high;
 					else
-					new_state <= low;
+						new_state <= low;
 					end if;
 				else 
-					if (to_integer(unsigned(count_in)) < 50000) then
-					new_state <= high;
+					if (to_integer(unsigned(count_in)) < 100000) then
+						new_state <= high;
 					else
-					new_state <= low;
+						new_state <= low;
 					end if;
 				end if;
 
