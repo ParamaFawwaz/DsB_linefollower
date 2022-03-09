@@ -33,43 +33,24 @@ architecture behavioral of motorcontrol is
 	begin
 		case state is
 			when Reset_state =>
-			next_state => high;
+			new_state <= high;
 
 			when  low =>
 				pwm <= '0';
 
-				if (direction = '1') then
-					if (count_in <= 500000) then
-					new_state => high;
-					else
-					new_state => low;
-					end if;
-				else 
-					if (count_in < 500000) then
-					new_state => high;
-					else
-					new_state => low;
-					end if;
-			end if;
-			
 
 		
 			when  high =>
 				pwm <= '1';
 
-			if (direction = '1') then
-				if (count_in <= 50000) then
-				new_state => high;
-				else
-				new_state => low;
-				end if;
+			if (to_integer(unsigned(count_in)) = 50000 and direction = '0') then
+				new_state <= low;
+			elsif (to_integer(unsigned(count_in)) = 100000) then
+				new_state <= low;
 			else 
-				if (count_in < 50000) then
-				new_state => high;
-				else
-				new_state => low;
-				end if;
+				new_state <= state;
 			end if;
+
 		end case;
 	end process;
 end architecture behavioral;
