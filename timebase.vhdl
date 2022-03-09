@@ -12,7 +12,7 @@ entity timebase is
 end entity timebase;
 
 architecture behavioural of timebase is
-	signal count : unsigned(20 downto 0);
+	signal count : unsigned(19 downto 0);
 	signal next_count : unsigned(19 downto 0);
 begin
 	process (clk) -- register
