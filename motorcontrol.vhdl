@@ -13,40 +13,63 @@ entity motorcontrol is
 end entity motorcontrol;
 
 architecture behavioral of motorcontrol is
-	
-	type motor_state is (reset_state, forward_state, backward_state);
+	type motor_state is (low, high, Reset_state);
 
 	signal state, new_state: motor_state;
 	begin
 
-	process(state, direction, reset)
-		procedure state_manipulation(
-			signal reset : in;
-			signal set_state_to : in)
+	process(clk)
 		begin
-			if (reset = '1') then
-				new_state <= reset_state;
-			else
-				new_state <= set_state_to;
+			if (rising_edge (clk)) then
+				if (reset = '1') then
+					state <= Reset_state;	
+				else
+					state <= new_state;
+				end if;
 			end if;
-		end procedure;
+		end process;
+	
+	process (state, direction)
 	begin
 		case state is
-			when  reset_state=>
-			pwm <= '0';
-				state_manipulation(reset, forward_stte);
-				
-			when  forward_state=>
-				pwm <= '1' after 0 ms,
-				pwm <= '0' after 1 ms;
-				
-				state_mainupulation(reset, forward_state);
+			when Reset_state =>
+			next_state => high;
 
-			when  backward_state=>
-				pwm <= '1' after 1 ms,
-				pwm <= '0' after 2 ms;
+			when  low =>
+				pwm <= '0';
 
-				state_manipulation(reset, backward_state);
+				if (direction = '1') then
+					if (count_in <= 500000) then
+					new_state => high;
+					else
+					new_state => low;
+					end if;
+				else 
+					if (count_in < 500000) then
+					new_state => high;
+					else
+					new_state => low;
+					end if;
+			end if;
+			
+
+		
+			when  high =>
+				pwm <= '1';
+
+			if (direction = '1') then
+				if (count_in <= 50000) then
+				new_state => high;
+				else
+				new_state => low;
+				end if;
+			else 
+				if (count_in < 50000) then
+				new_state => high;
+				else
+				new_state => low;
+				end if;
+			end if;
 		end case;
 	end process;
 end architecture behavioral;
