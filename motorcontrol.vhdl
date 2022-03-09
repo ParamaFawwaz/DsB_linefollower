@@ -38,18 +38,23 @@ architecture behavioral of motorcontrol is
 			when  low =>
 				pwm <= '0';
 
-
 		
 			when  high =>
 				pwm <= '1';
 
-			if (to_integer(unsigned(count_in)) = 50000 and direction = '0') then
-				new_state <= low;
-			elsif (to_integer(unsigned(count_in)) = 100000) then
-				new_state <= low;
-			else 
-				new_state <= state;
-			end if;
+				if (direction = '1') then
+					if (to_integer(unsigned(count_in)) <= 50000) then
+					new_state <= high;
+					else
+					new_state <= low;
+					end if;
+				else 
+					if (to_integer(unsigned(count_in)) < 50000) then
+					new_state <= high;
+					else
+					new_state <= low;
+					end if;
+				end if;
 
 		end case;
 	end process;
