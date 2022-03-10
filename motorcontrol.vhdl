@@ -43,7 +43,7 @@ architecture behavioral of motorcontrol is
 			when  high =>
 				pwm <= '1';
 
-				if (direction = '1') then
+				if (direction = '0') then
 					if (to_integer(unsigned(count_in)) < 50000) then
 						new_state <= high;
 					else
