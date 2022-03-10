@@ -6,26 +6,26 @@ end entity buffer_tb;
 
 architecture structural of buffer_tb is
     
-    component buffer is
+    component inputbuffer is
         port(clk : in std_logic;
-        sensor_L_in : in std_logic;
-        sensor_M_in : in std_logic;
-        sensor_R_in : in std_logic;
+        sensor_l_in : in std_logic;
+        sensor_m_in : in std_logic;
+        sensor_r_in : in std_logic;
 
-        sensor_L_out : out std_logic;
-        sensor_M_out : out std_logic;
-        sensor_R_out : out std_logic
+        sensor_l_out : out std_logic;
+        sensor_m_out : out std_logic;
+        sensor_r_out : out std_logic
         );
-    end component buffer;
+    end component inputbuffer;
 
-    signal sensor_L, sensor_M, sensor_R : std_logic;
+    signal sensor_l, sensor_m, sensor_r : std_logic;
     signal clk : std_logic;
 
 begin
-    PM: buffer port map is (clk => clk,
-                            sensor_L_in => sensor_L,
-                            sensor_M_in => sensor_M,
-                            sensor_R_in	=> sensor_R);
+    PM: inputbuffer port map (clk => clk,
+                            sensor_l_in => sensor_l,
+                            sensor_m_in => sensor_m,
+                            sensor_r_in	=> sensor_r);
     
     -- one clock cycle is 20 ns
     clk	    <=	'0' after 0 ns, 

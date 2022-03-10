@@ -1,4 +1,12 @@
-D:/schoolprogramfiles/git/linefollower/timebase.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/timebase.vhdl
+D:/schoolprogramfiles/git/linefollower/motor_tb.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/motor_tb.vhdl
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity motor_tb
+-- Compiling architecture structural of motor_tb
+
+} {} {}} D:/schoolprogramfiles/git/linefollower/timebase.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/timebase.vhdl
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,22 +14,5 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package NUMERIC_STD
 -- Compiling entity timebase
 -- Compiling architecture behavioural of timebase
-
-} {} {}} D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity motorcontrol
--- Compiling architecture behavioral of motorcontrol
-
-} {} {}} D:/schoolprogramfiles/git/linefollower/motor_tb.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/motor_tb.vhdl
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity motor_tb
--- Compiling architecture structural of motor_tb
 
 } {} {}}
