@@ -1,5 +1,5 @@
 library IEEE;
--- Please add necessary libraries:
+use std_logic_1164.all;
 
 
 entity controller is
@@ -20,3 +20,36 @@ entity controller is
 		motor_r_direction	: out	std_logic
 	);
 end entity controller;
+
+architecture behavioral of controller is
+	type controller_state is (reset_state, gentle_left, hard_left, gentle_right, hard_right, forward);
+	signal state, new_state : controller_state;
+	
+	begin
+	
+
+	process(count_in) -- forces reset state when reset = '1'
+	begin
+		if (integer(unsigned(count_in)) = 0) then -- this might be wrong
+			if (reset = '1') then
+				state <= reset_state;	
+			else
+				state <= new_state;
+			end if;
+		end if;
+
+		--if (count_in = 20ms) then reset timebase; 
+	end process;
+
+	process(sensor_l, sensor_m, sensor_r) -- changes state according to input signals
+		-- case statement for determining state
+		case state is
+			when gentle_left =>
+			--motor left is stationary
+			--motor right is going forward
+			when hard_left =>
+			--motor left is going backwards
+			--motor right is going forwards
+			when gentle_left =>
+	
+end architecture behavioral;
