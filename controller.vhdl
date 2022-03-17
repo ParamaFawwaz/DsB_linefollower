@@ -21,10 +21,11 @@ entity controller is
 	);
 end entity controller;
 
+-- here we assumed sensor = 1 -> white, and sensor 0 -> black
 
 architecture behavioral of controller is
 
-    type controller_state is (reset_state, gentle_left, hard_left, gentle_right, hard_right, forward);
+    type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward);
 
     signal state, new_state : controller_state;
 
@@ -41,17 +42,50 @@ architecture behavioral of controller is
 	
 					state <= reset_state;  
 	
-				else
+				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
 	
-					state <= new_state;
+					state <= forward;
+				
+				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+
+				state <= gentle_left;
+
+				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+
+				state <= forward;
+
+				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+
+				state <= sharp_left;
+
+				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+
+				state <= gentle_right;
+
+				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
 	
+				state <= forward;
+
+				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+	
+				state <= sharp_right;
+
+				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '1')
+	
+				state <= forward;
+					
 				end if;
 	
 			end if;
 	
+			
 	
-	
-			--if (count_in = 20ms) then reset timebase;
+			if (to_integer(unsigned(count_in)) < 100000) then --reset timebase
+					count_reset = '1';
+			else 
+					count_reset = '0'; --to make it synthesizable
+			end if;
+
 	
 		end process;
 	
@@ -66,16 +100,65 @@ architecture behavioral of controller is
 				when gentle_left =>
 	
 				--motor left is stationary
-	
+				motor_l_reset = '1';
+				
 				--motor right is going forward
+				motor_r_reset = '0';
+				motor_r_direction = '1';
+				
 	
-				when hard_left =>
+				when sharp_left =>
 	
 				--motor left is going backwards
+				motor_l_reset = '0';
+				motor_l_direction = '0';
+
 	
 				--motor right is going forwards
+				motor_r_reset = '0';
+				motor_r_direction = '1';
+				
 	
-				when gentle_left =>
+				when gentle_right =>
+
+				--motor left is going forwards
+				motor_l_reset = '0';
+				motor_l_direction = '1';
+
+
+				--motor right is stationary
+				motor_r_reset = '1';
+
+				when sharp_right =>
+
+				--motor left is going forwards
+				motor_l_reset = '0';
+				motor_l_direction = '1';
+
+
+				--motor right is going backwards
+
+				motor_r_reset = '0';
+				motor_r_direction = '0';
+
+
+
+				when forwards =>
+
+				-- motor left is forwards
+
+				motor_l_reset = '0';
+				motor_l_direction = '1';
+
+				
+				-- motor right is forwards
+				
+				motor_r_reset = '0';
+				motor_r_direction = '1';
+
+
+			end case;
+		end process;
 	
 	   
 	
