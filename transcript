@@ -1,28 +1,24 @@
-# Compile of buffer.vhdl was successful.
-# Compile of buffer_tb.vhdl was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.buffer_tb
-# Error while executing: vsim
-# Usage: vsim
-vsim -novopt work.buffer_tb
-# vsim -novopt work.buffer_tb 
-# Start time: 15:21:00 on Mar 10,2022
+# Compile of motor_tb.vhdl was successful.
+# Compile of motorcontrol.vhdl was successful.
+# Compile of timebase.vhdl was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -novopt work.motor_tb
+# vsim -novopt work.motor_tb 
+# Start time: 15:44:43 on Mar 10,2022
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading std.standard
-# Refreshing D:/schoolprogramfiles/git/linefollower/work.buffer_tb(structural)
+# Refreshing D:/schoolprogramfiles/git/linefollower/work.motor_tb(structural)
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.buffer_tb(structural)
-# Refreshing D:/schoolprogramfiles/git/linefollower/work.inputbuffer(structural)
-# Loading work.inputbuffer(structural)
-# Refreshing D:/schoolprogramfiles/git/linefollower/work.three_bit_register(structural)
-# Loading work.three_bit_register(structural)
-# Refreshing D:/schoolprogramfiles/git/linefollower/work.d_flip_flop(behavioural)
-# Loading work.d_flip_flop(behavioural)
-add wave -position insertpoint sim:/buffer_tb/*
+# Loading work.motor_tb(structural)
+# Refreshing D:/schoolprogramfiles/git/linefollower/work.timebase(behavioural)
+# Loading ieee.numeric_std(body)
+# Loading work.timebase(behavioural)
+# Refreshing D:/schoolprogramfiles/git/linefollower/work.motorcontrol(behavioral)
+# Loading work.motorcontrol(behavioral)
+add wave -position insertpoint sim:/motor_tb/*
 run -all
-# Causality operation skipped due to absence of debug database file
 # Break key hit
-# Break in Architecture structural at D:/schoolprogramfiles/git/linefollower/buffer_tb.vhdl line 32
-# End time: 15:33:51 on Mar 10,2022, Elapsed time: 0:12:51
-# Errors: 0, Warnings: 2
+# Break in Process line__18 at D:/schoolprogramfiles/git/linefollower/timebase.vhdl line 20
+# End time: 15:56:56 on Mar 10,2022, Elapsed time: 0:12:13
+# Errors: 0, Warnings: 1
