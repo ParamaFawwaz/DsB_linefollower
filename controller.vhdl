@@ -1,5 +1,7 @@
 library IEEE;
-use std_logic_1164.all;
+-- Please add necessary libraries:
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 
 entity controller is
@@ -10,7 +12,7 @@ entity controller is
 		sensor_m		: in	std_logic;
 		sensor_r		: in	std_logic;
 
-		count_in		: in	std_logic_vector (19 downto 0);  -- Please enter upper bound
+		count_in		: in	std_logic_vector (19 downto 0); 
 		count_reset		: out	std_logic;
 
 		motor_l_reset		: out	std_logic;
@@ -32,129 +34,229 @@ architecture behavioral of controller is
    
 
     begin
-		process(count_in) -- forces reset state when reset = '1'
+		process(clk, count_in) -- forces reset state when reset = '1'
 
 		begin
-	
-			if (integer(unsigned(count_in)) = 0) then -- this might be wrong
+
+			if (to_integer(unsigned(count_in)) > 999999) then --reset timebase
+					count_reset = '1';
+			else 
+					count_reset = '0'; --to make it synthesizable
+			end if;
+
+
+			if (integer(unsigned(count_in)) = 0 and rising_edge(clk)) then 
 	
 				if (reset = '1') then
 	
-					state <= reset_state;  
-	
-				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
-	
-					state <= forward;
-				
-				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
-
-				state <= gentle_left;
-
-				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
-
-				state <= forward;
-
-				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
-
-				state <= sharp_left;
-
-				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
-
-				state <= gentle_right;
-
-				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
-	
-				state <= forward;
-
-				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
-	
-				state <= sharp_right;
-
-				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '1')
-	
-				state <= forward;
+					state <= reset_state;
 					
+				else
+					state <= new_state;
 				end if;
 	
 			end if;
 	
 			
 	
-			if (to_integer(unsigned(count_in)) < 100000) then --reset timebase
-					count_reset = '1';
-			else 
-					count_reset = '0'; --to make it synthesizable
-			end if;
-
+			
 	
 		end process;
 	
 	
 	
-		process(sensor_l, sensor_m, sensor_r) -- changes state according to input signals
+		process(sensor_l, sensor_m, sensor_r, clk, state) -- changes state according to input signals
 	
 			-- case statement for determining state
 	
 			case state is
+
+				when reset_state =>
+					--motor left is stationary
+					motor_l_reset = '1';
+					motor_r_direction = '0';   	--I assume that this doesnt matter, as long as we fill something in to make it synthesizable (might be handy to check later)
+												-- from now I will denote such values as dummy
+
+					
+					--motor right is stationary
+					motor_r_reset = '1';
+					motor_r_direction = '1'; --dummy
+
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
 	
 				when gentle_left =>
 	
-				--motor left is stationary
-				motor_l_reset = '1';
-				
-				--motor right is going forward
-				motor_r_reset = '0';
-				motor_r_direction = '1';
-				
-	
-				when sharp_left =>
-	
-				--motor left is going backwards
-				motor_l_reset = '0';
-				motor_l_direction = '0';
+					--motor left is stationary
+					motor_l_reset = '1';
+					motor_r_direction = '0';   --dummy
 
-	
-				--motor right is going forwards
-				motor_r_reset = '0';
-				motor_r_direction = '1';
+					
+					--motor right is going forward
+					motor_r_reset = '0';
+					motor_r_direction = '1';
+
+			
+				
+					
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
+		
+
+
+
+				when sharp_left =>
+		
+					--motor left is going backwards
+					motor_l_reset = '0';
+					motor_l_direction = '0';
+
+			
+			
+					--motor right is going forwards
+					motor_r_reset = '0';
+					motor_r_direction = '1';
+
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
 				
 	
 				when gentle_right =>
 
-				--motor left is going forwards
-				motor_l_reset = '0';
-				motor_l_direction = '1';
+					--motor left is going forwards
+					motor_l_reset = '0';
+					motor_l_direction = '1';
 
+			
+					--motor right is stationary
+					motor_r_reset = '1';
+					motor_r_direction = '0'; --dummy
 
-				--motor right is stationary
-				motor_r_reset = '1';
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
 
 				when sharp_right =>
 
-				--motor left is going forwards
-				motor_l_reset = '0';
-				motor_l_direction = '1';
+					--motor left is going forwards
+					motor_l_reset = '0';
+					motor_l_direction = '1';
 
 
-				--motor right is going backwards
+					--motor right is going backwards
 
-				motor_r_reset = '0';
-				motor_r_direction = '0';
+					motor_r_reset = '0';
+					motor_r_direction = '0';
+
+
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
 
 
 
 				when forwards =>
 
-				-- motor left is forwards
+					-- motor left is forwards
 
-				motor_l_reset = '0';
-				motor_l_direction = '1';
+					motor_l_reset = '0';
+					motor_l_direction = '1';
+					
+					-- motor right is forwards
+					
+					motor_r_reset = '0';
+					motor_r_direction = '1';
 
-				
-				-- motor right is forwards
-				
-				motor_r_reset = '0';
-				motor_r_direction = '1';
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1')
+						state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0')
+						state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1')
+						state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0')
+						state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1')
+						state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0')
+						state <= sharp_right;
+					else 
+						state <= forward;	
+					end if;
 
 
 			end case;
