@@ -58,7 +58,7 @@ R11
 R12
 R13
 Econtroller
-Z14 w1647939321
+Z14 w1647941819
 Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
@@ -71,9 +71,9 @@ VUKKmQ>MQgAAfaGd5nll>H3
 !s100 1EWL0f>@`=_5PSnmjICN_0
 R7
 32
-Z18 !s110 1647939327
+Z18 !s110 1648037269
 !i10b 1
-Z19 !s108 1647939327.000000
+Z19 !s108 1648037269.000000
 Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl|
 Z21 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl|
 !i113 0
@@ -99,7 +99,7 @@ R21
 R12
 R13
 Econtroller_tb
-Z22 w1647941487
+Z22 w1647941816
 R2
 R3
 R4
@@ -111,9 +111,9 @@ Vo2Hl`Y[b7Pi^1VGjzGhaR1
 !s100 WfNUX]JPBBfe1ULR_:lAd3
 R7
 32
-Z25 !s110 1647941493
+Z25 !s110 1648037257
 !i10b 1
-Z26 !s108 1647941493.000000
+Z26 !s108 1648037257.000000
 Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
 Z28 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
 !i113 0
