@@ -22,14 +22,14 @@ entity controller is
 end entity controller;
 
 architecture behavioral of controller is
-    type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward, control_state);
+    type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward);
     signal state, next_state : controller_state;
 	signal sensor_vector : std_logic_vector(1 downto 0);
 
     begin
 		process(clk, count_in)--'normal' timebase reset 
 			begin
-			if (to_integer(integer(unsigned(count_in))) < 1000000) then 
+			if (to_integer(unsigned(count_in)) < 1000000) then 
 					count_reset <= '0';
 			else 
 					count_reset <= '1'; 
@@ -80,7 +80,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '1';
 					motor_r_direction <= '1'; --dummy
 
-					count_reset = '1'; -- reset timebase
+					count_reset <= '1'; -- reset timebase
 				when gentle_left =>
 					--motor left is stationary
 					motor_l_reset <= '1';
