@@ -22,56 +22,65 @@ entity controller is
 end entity controller;
 
 architecture behavioral of controller is
-    type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward);
-    signal state, new_state : controller_state;
+    type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward, control_state);
+    signal state, next_state : controller_state;
 	signal sensor_vector : std_logic_vector(1 downto 0);
 
     begin
 		process(clk, count_in)--'normal' timebase reset 
 			begin
-			if (to_integer(unsigned(count_in)) < 1000000) then 
+			if (to_integer(integer(unsigned(count_in))) < 1000000) then 
 					count_reset <= '0';
 			else 
 					count_reset <= '1'; 
 			end if;
 		end process;
 
-		process(sensor_l, sensor_m, sensor_r)
+		process(clk)
+			begin
+			if(clk'event and clk = '1') then 
+				if(reset = '1') then
+					state <= reset_state;
+				else
+					state <= next_state;
+				end if;
+			end if ;
+		end process;
+
+		process(sensor_l, sensor_m, sensor_r) -- determines next state
 			begin
 				if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0') then
-					new_state <= forward;
+					next_state <= forward;
 				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1') then
-					new_state <= gentle_left;
+					next_state <= gentle_left;
 				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0') then
-					new_state <= forward;
+					next_state <= forward;
 				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1') then
-					new_state <= sharp_left;
+					next_state <= sharp_left;
 				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0') then
-					new_state <= gentle_right;
+					next_state <= gentle_right;
 				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1') then
-					new_state <= forward;
+					next_state <= forward;
 				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0') then
-					new_state <= sharp_right;
+					next_state <= sharp_right;
 				else 
-					new_state <= forward;	
+					next_state <= forward;	
 				end if;
 		end process;
 			
-		process(sensor_l, sensor_m, sensor_r, clk, state) -- changes state according to input signals
-			-- case statement for determining state
+		process(state)
 			begin
 			case state is
 				when reset_state =>
 					--motor left is stationary
 					motor_l_reset <= '1';
-					motor_l_direction <= '0';   	--I assume that this doesnt matter, as long as we fill something in to make it synthesizable (might be handy to check later)
-												-- from now I will denote such values as dummy
-					--motor right is stationary
+					motor_l_direction <= '0';  -- for synthesizing. Henceforth denoted as 'dummy'
+					
+					--motor
 					motor_r_reset <= '1';
 					motor_r_direction <= '1'; --dummy
 
-					--timebase receives reset as well
-					count_reset = '1';
+					count_reset = '1'; -- reset timebase
 				when gentle_left =>
 					--motor left is stationary
 					motor_l_reset <= '1';
