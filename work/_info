@@ -99,64 +99,68 @@ R21
 R12
 R13
 Econtroller_tb
-Z22 w1648150549
+Z22 w1648218651
+Z23 DPx4 ieee 20 numeric_std_unsigned 0 22 jF^[l6kSe0l<k3W[UC=P83
+R15
 R2
 R3
 R4
-Z23 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl
-Z24 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl
+Z24 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl
+Z25 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl
 l0
-L4
-Vo2Hl`Y[b7Pi^1VGjzGhaR1
-!s100 WfNUX]JPBBfe1ULR_:lAd3
+L6
+VK4L8M5[8jPmTS7P@TX;E01
+!s100 hXo2lJfT6Cm1Dlc`HCZb_3
 R7
 32
-R8
+Z26 !s110 1648218662
 !i10b 1
-R9
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
-Z26 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
+Z27 !s108 1648218662.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
+Z29 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl|
 !i113 0
 R12
 R13
 Astructural
+R23
+R15
 R2
 R3
-DEx4 work 13 controller_tb 0 22 o2Hl`Y[b7Pi^1VGjzGhaR1
+DEx4 work 13 controller_tb 0 22 K4L8M5[8jPmTS7P@TX;E01
 32
-R8
-l54
-L8
-V2KTASG[e_MJQ`X1^Qb:io0
-!s100 SzE?c0ST?CSoC`ERW5NfI0
+R26
+l49
+L9
+V29KPYnV;@zBDDk_?cIIIb2
+!s100 _[FMgjW?X?dT9FoV=jAPO1
 R7
 !i10b 1
-R9
-R25
-R26
+R27
+R28
+R29
 !i113 0
 R12
 R13
 Ed_flip_flompkers
-Z27 w1646862242
+Z30 w1646862242
 R2
 R3
 R0
-Z28 8D:/schoolprogramfiles/git/linefollower/buffer.vhdl
-Z29 FD:/schoolprogramfiles/git/linefollower/buffer.vhdl
+Z31 8D:/schoolprogramfiles/git/linefollower/buffer.vhdl
+Z32 FD:/schoolprogramfiles/git/linefollower/buffer.vhdl
 l0
 L4
 VUAn0_E;Gf1dDRazDbM;:g2
 !s100 Yh<oZ30LDW6boF0OZGHG=3
 R7
 32
-Z30 !s110 1646862251
+Z33 !s110 1646862251
 !i10b 1
-Z31 !s108 1646862251.000000
-Z32 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/buffer.vhdl|
-Z33 !s107 D:/schoolprogramfiles/git/linefollower/buffer.vhdl|
+Z34 !s108 1646862251.000000
+Z35 !s90 -reportprogress|300|-work|work|D:/schoolprogramfiles/git/linefollower/buffer.vhdl|
+Z36 !s107 D:/schoolprogramfiles/git/linefollower/buffer.vhdl|
 !i113 0
-Z34 o-work work
+Z37 o-work work
 R13
 Abehavioural
 R2
@@ -168,32 +172,32 @@ VEZoEBfGMHDgY[P]DPKhRk0
 !s100 9@45QASbS]aiodF?a3S0a1
 R7
 32
-R30
-!i10b 1
-R31
-R32
 R33
-!i113 0
+!i10b 1
 R34
+R35
+R36
+!i113 0
+R37
 R13
 Ed_flip_flop
-Z35 w1648042042
+Z38 w1648042042
 R2
 R3
 R4
-Z36 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl
-Z37 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl
+Z39 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl
+Z40 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl
 l0
 L6
 VdbZA7f]n1N0dId3F6Hfm21
 !s100 8LhGh4l0G[ceBQOM@1N]^3
 R7
 32
-Z38 !s110 1648151097
+Z41 !s110 1648151097
 !i10b 1
-Z39 !s108 1648151097.000000
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl|
-Z41 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl|
+Z42 !s108 1648151097.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl|
+Z44 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl|
 !i113 0
 R12
 R13
@@ -207,32 +211,32 @@ VLHK3[:iUoL4>5;IOh4_lC0
 !s100 MeOG5Whc@OJjmhdflo9hF0
 R7
 32
-R38
-!i10b 1
-R39
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 0
 R12
 R13
 Einputbuffer
-R35
+R38
 R2
 R3
 R4
-R36
-R37
+R39
+R40
 l0
 L65
 V3I3eI>k^5]^Tb@J;dJl>A0
 !s100 9ASN3ZH0g:z2J1S[CD9]I0
 R7
 32
-R38
-!i10b 1
-R39
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 0
 R12
 R13
@@ -246,33 +250,33 @@ V5AjNMNgfXYeBVUDT?fQWg3
 !s100 5d3Hi^h>YA9MS8G=1WIFX3
 R7
 32
-R38
-!i10b 1
-R39
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 0
 R12
 R13
 Eknightrider
-Z42 w1646123609
+Z45 w1646123609
 R15
 R2
 R3
 R4
-Z43 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl
-Z44 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl
+Z46 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl
+Z47 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl
 l0
 L5
 Vdzhzi^ZbHU2f2_=CXKaAn3
 !s100 J372^mk5JmC`R8o<o=34V2
 R7
 32
-Z45 !s110 1648151096
+Z48 !s110 1648151096
 !i10b 1
-Z46 !s108 1648151096.000000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl|
-Z48 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl|
+Z49 !s108 1648151096.000000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl|
+Z51 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl|
 !i113 0
 R12
 R13
@@ -287,11 +291,11 @@ Vgnzc0]Ooigb;H7WLJQJ730
 !s100 fa;JabM<PSm3LlQo1e_N82
 R7
 32
-R45
-!i10b 1
-R46
-R47
 R48
+!i10b 1
+R49
+R50
+R51
 !i113 0
 R12
 R13
@@ -300,19 +304,19 @@ R1
 R2
 R3
 R4
-Z49 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl
-Z50 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl
+Z52 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl
+Z53 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl
 l0
 L4
 VHn32W1>_j]cT[N<;j1KBA0
 !s100 zf`N6JW5i95kl<Kzm;DIN2
 R7
 32
-R45
+R48
 !i10b 1
-R46
-Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl|
-Z52 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl|
+R49
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl|
+Z55 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl|
 !i113 0
 R12
 R13
@@ -326,11 +330,11 @@ VW<KG;1>U3G_0_2jD7<[9W0
 !s100 ^n>BLGT7F7DYUC;Bk9IzA1
 R7
 32
-R45
+R48
 !i10b 1
-R46
-R51
-R52
+R49
+R54
+R55
 !i113 0
 R12
 R13
@@ -340,19 +344,19 @@ R15
 R2
 R3
 R4
-Z53 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl
-Z54 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl
+Z56 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl
+Z57 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl
 l0
 L5
 V[81U36E^iU[kDg=BVCzZI3
 !s100 YLSzRm[I=KRY@LNiKnzoB3
 R7
 32
-R45
+R48
 !i10b 1
-R46
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl|
-Z56 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl|
+R49
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl|
+Z59 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl|
 !i113 0
 R12
 R13
@@ -367,11 +371,11 @@ Vc0BH`o_bT13jgfQ<BRB`Q0
 !s100 1VfBLzY=<]8^TARb[D`L63
 R7
 32
-R45
+R48
 !i10b 1
-R46
-R55
-R56
+R49
+R58
+R59
 !i113 0
 R12
 R13
@@ -388,32 +392,32 @@ V2PU8NV6zl2^8?L7R4;J>K3
 !s100 ln`dPDW5MY:`T?VLN8:Nc0
 R7
 32
-R38
+R41
 !i10b 1
-R46
+R49
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl|
 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl|
 !i113 0
 R12
 R13
 Erobot_tb
-Z57 w1646123769
+Z60 w1646123769
 R2
 R3
 R4
-Z58 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl
-Z59 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl
+Z61 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl
+Z62 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl
 l0
 L4
 V`_AmC1k@K`mBBkC0MiTZl1
 !s100 00G0gR5eINNnZFhNFA1oi2
 R7
 32
-R38
+R41
 !i10b 1
-R39
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl|
-Z61 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl|
+R42
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl|
+Z64 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl|
 !i113 0
 R12
 R13
@@ -427,11 +431,11 @@ VdESd8cQE:j1Vc=eg^jhao1
 !s100 OJa7UnMS77dXN9lFi8?1V3
 R7
 32
-R38
+R41
 !i10b 1
-R39
-R60
-R61
+R42
+R63
+R64
 !i113 0
 R12
 R13
@@ -440,19 +444,19 @@ R1
 R2
 R3
 R4
-Z62 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl
-Z63 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl
+Z65 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl
+Z66 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl
 l0
 L4
 V4Y[:]lX^eE0IInXPz1C900
 !s100 NaNUGQOUoO6LLI=3hH9@h2
 R7
 32
-R38
+R41
 !i10b 1
-R39
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl|
-Z65 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl|
+R42
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl|
+Z68 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl|
 !i113 0
 R12
 R13
@@ -466,32 +470,32 @@ V;kCebRCUW4f>kzQ`ZT:;[0
 !s100 JOj9]ilRc5RGEAE2^Xj[N1
 R7
 32
-R38
+R41
 !i10b 1
-R39
-R64
-R65
+R42
+R67
+R68
 !i113 0
 R12
 R13
 Ethree_bit_register
-R35
+R38
 R2
 R3
 R4
-R36
-R37
+R39
+R40
 l0
 L32
 V?afWoYZhPaC4i=Zk;P0d_0
 !s100 DEai4ATn?T]XXP@M=PeSP2
 R7
 32
-R38
-!i10b 1
-R39
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 0
 R12
 R13
@@ -505,11 +509,11 @@ V_zak>E5PRc:d:=G9<ZeIY1
 !s100 XjVLo:JLJY<o]O`0AMNMa1
 R7
 32
-R38
-!i10b 1
-R39
-R40
 R41
+!i10b 1
+R42
+R43
+R44
 !i113 0
 R12
 R13
@@ -519,19 +523,19 @@ R15
 R2
 R3
 R4
-Z66 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl
-Z67 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl
+Z69 8C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl
+Z70 FC:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl
 l0
 L6
 VUH[Re<Whb<Z[H:zbYSk[U1
 !s100 MF70iLDJ]BzK9WzHSk<2f2
 R7
 32
-R38
+R41
 !i10b 1
-R39
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl|
-Z69 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl|
+R42
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl|
+Z72 !s107 C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl|
 !i113 0
 R12
 R13
@@ -541,16 +545,16 @@ R2
 R3
 DEx4 work 8 timebase 0 22 UH[Re<Whb<Z[H:zbYSk[U1
 32
-R38
+R41
 l17
 L14
 VSP3JFF>TGjl5Hmc5?Y3g]1
 !s100 Z1JzomK2J<c1nBiEf@noM0
 R7
 !i10b 1
-R39
-R68
-R69
+R42
+R71
+R72
 !i113 0
 R12
 R13
