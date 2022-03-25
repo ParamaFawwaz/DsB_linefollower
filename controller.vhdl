@@ -29,16 +29,21 @@ architecture behavioral of controller is
     begin
 		process(clk, count_in)--'normal' timebase reset 
 			begin
-			if (to_integer(unsigned(count_in)) < 1000000) then 
-					count_reset <= '0';
-			else 
-					count_reset <= '1'; 
+			if (to_integer(unsigned(count_in)) = 0) then
+				if (to_integer(unsigned(count_in)) < 1 or to_integer(unsigned(count_in)) = 1) then 
+						count_reset <= '1';
+				elsif (to_integer(unsigned(count_in)) < 1000000 and to_integer(unsigned(count_in)) > 1) then 
+						count_reset <= '0';
+
+				else 
+						count_reset <= '1'; 
+				end if;
 			end if;
 		end process;
 
 		process(clk)
 			begin
-			if(clk'event and clk = '1') then 
+			if(clk'event and clk = '1' and to_integer(unsigned(count_in)) = 0) then 
 				if(reset = '1') then
 					state <= reset_state;
 				else
