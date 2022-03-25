@@ -76,12 +76,18 @@ begin
 	clk			<=	'0' after 0 ns,
 					'1' after 10 ns when clk /= '1' else '0' after 10 ns;
 
-	controller_reset		<=	'1' after 0 ns,
+	controller_reset <=	'1' after 0 ns,
 					'0' after 20 ns,
 					'1' after 20000000 ns,
 					'0' after 20000020 ns,
 					'1' after 40000000 ns,
 					'0' after 40000020 ns;
+
+    controller_count_reset <=
+                    '1' after 0 ns,
+                    '0' after 20 ns,
+                    '1' after 20 ms,
+                    '0' after 21 ms;
 
     sig_sensor_r <=     '0' after 0 ns,
                     '1' after 15 ns,
@@ -98,11 +104,8 @@ begin
                     '1' after 115 ns,
                     '0' after 155 ns;
     
-    sig_sensor_l <=     '0' after 0 ns,
+    sig_sensor_l <= '0' after 0 ns,
                     '1' after 75 ns,
                     '0' after 155 ns;
-    
-    
-    
 
 end architecture structural;
