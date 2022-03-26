@@ -27,19 +27,7 @@ architecture behavioral of controller is
 	signal sensor_vector : std_logic_vector(1 downto 0);
 
     begin
-		process(clk, count_in)--'normal' timebase reset 
-			begin
-			if (to_integer(unsigned(count_in)) = 0) then
-				if (to_integer(unsigned(count_in)) < 1 or to_integer(unsigned(count_in)) = 1) then 
-						count_reset <= '1';
-				elsif (to_integer(unsigned(count_in)) < 1000000 and to_integer(unsigned(count_in)) > 1) then 
-						count_reset <= '0';
-
-				else 
-						count_reset <= '1'; 
-				end if;
-			end if;
-		end process;
+		
 
 		process(clk)
 			begin
@@ -51,27 +39,7 @@ architecture behavioral of controller is
 				end if;
 			end if ;
 		end process;
-
-		process(sensor_l, sensor_m, sensor_r) -- determines next state
-			begin
-				if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0') then
-					next_state <= forward;
-				elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1') then
-					next_state <= gentle_left;
-				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0') then
-					next_state <= forward;
-				elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1') then
-					next_state <= sharp_left;
-				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0') then
-					next_state <= gentle_right;
-				elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1') then
-					next_state <= forward;
-				elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0') then
-					next_state <= sharp_right;
-				else 
-					next_state <= forward;	
-				end if;
-		end process;
+		
 			
 		process(state)
 			begin
@@ -86,6 +54,26 @@ architecture behavioral of controller is
 					motor_r_direction <= '1'; --dummy
 
 					count_reset <= '1'; -- reset timebase
+
+					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0') then
+						next_state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1') then
+						next_state <= gentle_left;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '0') then
+						next_state <= forward;
+					elsif (sensor_l = '0' and sensor_m = '1' and sensor_r = '1') then
+						next_state <= sharp_left;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '0') then
+						next_state <= gentle_right;
+					elsif (sensor_l = '1' and sensor_m = '0' and sensor_r = '1') then
+						next_state <= forward;
+					elsif (sensor_l = '1' and sensor_m = '1' and sensor_r = '0') then
+						next_state <= sharp_right;
+					else 
+						next_state <= forward;	
+					end if;
+
+					
 				when gentle_left =>
 					--motor left is stationary
 					motor_l_reset <= '1';
@@ -93,6 +81,11 @@ architecture behavioral of controller is
 					--motor right is going forward
 					motor_r_reset <= '0';
 					motor_r_direction <= '1';
+
+					count_reset <= '0';
+
+					next_state <= reset_state;
+
 				when sharp_left =>
 					--motor left is going backwards
 					motor_l_reset <= '0';
@@ -100,6 +93,11 @@ architecture behavioral of controller is
 					--motor right is going forwards
 					motor_r_reset <= '0';
 					motor_r_direction <= '1';
+
+					count_reset <= '0';
+
+					next_state <= reset_state;
+
 				when gentle_right =>
 					--motor left is going forwards
 					motor_l_reset <= '0';
@@ -107,6 +105,11 @@ architecture behavioral of controller is
 					--motor right is stationary
 					motor_r_reset <= '1';
 					motor_r_direction <= '0'; --dummy
+
+					count_reset <= '0';
+
+					next_state <= reset_state;
+
 				when sharp_right =>
 					--motor left is going forwards
 					motor_l_reset <= '0';
@@ -114,6 +117,11 @@ architecture behavioral of controller is
 					--motor right is going backwards
 					motor_r_reset <= '0';
 					motor_r_direction <= '0';
+
+					count_reset <= '0';
+
+					next_state <= reset_state;
+
 				when forward =>
 					-- motor left is forwards
 					motor_l_reset <= '0';
@@ -121,6 +129,12 @@ architecture behavioral of controller is
 					-- motor right is forwards
 					motor_r_reset <= '0';
 					motor_r_direction <= '1';
+
+
+					count_reset <= '0';
+
+					next_state <= reset_state;
+
 			end case;
 		end process;
 	end architecture behavioral;

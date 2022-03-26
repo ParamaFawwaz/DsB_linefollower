@@ -88,22 +88,22 @@ begin
                 '0' after 40000020 ns;
 
     sig_sensor_r <=     '0' after 0 ns,
-                    '1' after 15 ns,
-                    '0' after 35 ns,
-                    '1' after 55 ns,
-                    '0' after 75 ns,
-                    '1' after 95 ns,
-                    '0' after 115 ns,
-                    '1' after 135 ns;
+                    '1' after 15 ms,
+                    '0' after 35 ms,
+                    '1' after 55 ms,
+                    '0' after 75 ms,
+                    '1' after 95 ms,
+                    '0' after 115 ms,
+                    '1' after 135 ms;
 
-    sig_sensor_m <=     '0' after 0 ns,
-                    '1' after 35 ns,
-                    '0' after 75 ns,
-                    '1' after 115 ns,
-                    '0' after 155 ns;
+    sig_sensor_m <=     '0' after 0 ms,
+                    '1' after 35 ms,
+                    '0' after 75 ms,
+                    '1' after 115 ms,
+                    '0' after 155 ms;
     
-    sig_sensor_l <= '0' after 0 ns,
-                    '1' after 75 ns,
-                    '0' after 155 ns;
+    sig_sensor_l <= '0' after 0 ms,
+                    '1' after 75 ms,
+                    '0' after 155 ms;
 
 end architecture structural;
