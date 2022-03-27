@@ -81,29 +81,26 @@ begin
     current_count <= next_count;
 
 	reset <=	'1' after 0 ns,
-                '0' after 20 ns,
-                '1' after 20000000 ns,
-                '0' after 20000020 ns,
-                '1' after 40000000 ns,
-                '0' after 40000020 ns;
+                '0' after 20 ns;
+               
 
-    sig_sensor_r <=     '0' after 0 ns,
+    sig_sensor_r <=  '0' after 0 ms,
                     '1' after 15 ms,
-                    '0' after 35 ms,
-                    '1' after 55 ms,
-                    '0' after 75 ms,
-                    '1' after 95 ms,
-                    '0' after 115 ms,
-                    '1' after 135 ms;
+                    '0' after 45 ms,
+                    '1' after 65 ms,
+                    '0' after 85 ms,
+                    '1' after 105 ms,
+                    '0' after 125 ms,
+                    '1' after 145 ms;
 
     sig_sensor_m <=     '0' after 0 ms,
-                    '1' after 35 ms,
-                    '0' after 75 ms,
-                    '1' after 115 ms,
-                    '0' after 155 ms;
+                    '1' after 25 ms,
+                    '0' after 45 ms,
+                    '1' after 65 ms,
+                    '0' after 85 ms;
     
     sig_sensor_l <= '0' after 0 ms,
-                    '1' after 75 ms,
-                    '0' after 155 ms;
+                    '1' after 85 ms,
+                    '0' after 165 ms;
 
 end architecture structural;

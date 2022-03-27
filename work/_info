@@ -91,9 +91,9 @@ V51_>RD=A030F]iEn68MlN1
 !s100 :LO6bhEo2o35EcaEFb7cW0
 R10
 32
-Z22 !s110 1648281002
+Z22 !s110 1648402070
 !i10b 1
-Z23 !s108 1648281002.000000
+Z23 !s108 1648402070.000000
 Z24 !s90 -reportprogress|300|-work|work|D:/github/DsB_linefollower/controller.vhdl|
 Z25 !s107 D:/github/DsB_linefollower/controller.vhdl|
 !i113 0
@@ -119,7 +119,7 @@ R25
 R26
 R16
 Econtroller_tb
-Z27 w1648281639
+Z27 w1648402123
 Z28 DPx4 ieee 20 numeric_std_unsigned 0 22 jF^[l6kSe0l<k3W[UC=P83
 R18
 R5
@@ -133,9 +133,9 @@ V=e6D2F3FCc8go>M3EG@Vh3
 !s100 hXo2lJfT6Cm1Dlc`HCZb_3
 R10
 32
-Z31 !s110 1648281711
+Z31 !s110 1648402130
 !i10b 1
-Z32 !s108 1648281711.000000
+Z32 !s108 1648402130.000000
 Z33 !s90 -reportprogress|300|-work|work|D:/github/DsB_linefollower/contoroller_tb.vhdl|
 Z34 !s107 D:/github/DsB_linefollower/contoroller_tb.vhdl|
 !i113 0
@@ -151,8 +151,8 @@ DEx4 work 13 controller_tb 0 22 =e6D2F3FCc8go>M3EG@Vh3
 R31
 l49
 L9
-VlXS`ZcVb@YcPN;d[ABCJ^1
-!s100 iV>=[GCY0Io@S0Y]C@VNd0
+V8@Kn5<0EFddifaoD3ma]92
+!s100 TZV7Tk@OeZbA6g2WXE?YD2
 R10
 !i10b 1
 R32
