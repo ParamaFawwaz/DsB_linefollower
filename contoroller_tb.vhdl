@@ -81,7 +81,7 @@ begin
     current_count <= next_count;
 
 	reset <=	'1' after 0 ns,
-                '0' after 20 ns;
+                '0' after 120 ms;
                
 
     sig_sensor_r <=  '0' after 0 ms,

@@ -1,18 +1,18 @@
-{C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity testbench
--- Compiling architecture structural of testbench
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl}
+{C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot_tb.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity robot_tb
 -- Compiling architecture structural of robot_tb
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer_tb.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity buffer_tb
+-- Compiling architecture structural of buffer_tb
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/knightrider.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -23,13 +23,23 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity knightrider
 -- Compiling architecture behavioural of knightrider
 
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer_tb.vhdl}
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase_tb.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity buffer_tb
--- Compiling architecture structural of buffer_tb
+-- Compiling entity testbench
+-- Compiling architecture structural of testbench
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\Paul\Documents\BSc EE\EE1D21\EE1D21 Line Follower\LineFollowerGit\contoroller_tb.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NUMERIC_STD_UNSIGNED
+-- Compiling entity controller_tb
+-- Compiling architecture structural of controller_tb
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -40,15 +50,57 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity controller
 -- Compiling architecture behavioral of controller
 
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/contoroller_tb.vhdl}
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl} {0 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity inputbuffer
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling entity timebase
+-- Compiling entity motorcontrol
+-- Compiling entity robot
+-- Compiling architecture structuoral of robot
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(144): (vcom-1348) Prefix (component declaration "input_buffer") of indexed name is not an array.
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(149): (vcom-1348) Prefix (component declaration "controller") of indexed name is not an array.
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(162): (vcom-1136) Unknown identifier "t2c_in".
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(168): Cannot read output "motor_l_pwm".
+	VHDL 2008 allows reading outputs.
+	This facility is enabled by compiling with -2008.
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(164): (vcom-1136) Unknown identifier "lbl_motorcontrol_L".
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(174): Cannot read output "motor_r_pwm".
+	VHDL 2008 allows reading outputs.
+	This facility is enabled by compiling with -2008.
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(170): (vcom-1136) Unknown identifier "lbl_motorcontrol_R".
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(176): Labels do not match: 'structuoral' and 'structural'.
+** Error: C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl(176): VHDL Compiler exiting
+
+} {13.0 17.0 19.0 21.0 23.0 26.0} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity motor_tb
+-- Compiling architecture structural of motor_tb
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package NUMERIC_STD_UNSIGNED
--- Compiling entity controller_tb
--- Compiling architecture structural of controller_tb
+-- Compiling entity motorcontrol
+-- Compiling architecture behavioral of motorcontrol
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity timebase
+-- Compiling architecture behavioural of timebase
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
@@ -61,38 +113,5 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling architecture structural of three_bit_register
 -- Compiling entity inputbuffer
 -- Compiling architecture structural of inputbuffer
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity timebase
--- Compiling architecture behavioural of timebase
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity motorcontrol
--- Compiling architecture behavioral of motorcontrol
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity motor_tb
--- Compiling architecture structural of motor_tb
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity robot
 
 } {} {}}
