@@ -107,13 +107,13 @@ architecture structural of robot is
 							
 
 		lbl_motorcontrol_L: motor_control port map( clk			=> clk,
-							reset		=> reset,
+							reset		=> c2mL_reset,
 							direction 	=> c2mL_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_l_pwm);
 		
 		lbl_motorcontrol_R: motor_control port map( clk			=> clk,
-							reset		=> reset,
+							reset		=> c2mR_reset,
 							direction 	=> c2mR_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_r_pwm);
