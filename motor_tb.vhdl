@@ -46,14 +46,9 @@ begin
 	clk			<=	'0' after 0 ns,
 					'1' after 10 ns when clk /= '1' else '0' after 10 ns;
 
-	reset			<=	'1' after 0 ns,
-					'0' after 20 ns,
-					'1' after 20000000 ns,
-					'0' after 20000020 ns,
-					'1' after 40000000 ns,
-					'0' after 40000020 ns;
+	reset <= '1' after 0 ns, '0' after 50 ns;
 
 	direction 		<=	'0' after 0 ns,   
-					'1' after 20000000 ns;
+					'1' after 50 ms;
 
 end architecture structural;

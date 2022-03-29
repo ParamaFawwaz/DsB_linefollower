@@ -50,14 +50,6 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity controller
 -- Compiling architecture behavioral of controller
 
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motor_tb.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity motor_tb
--- Compiling architecture structural of motor_tb
-
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
@@ -66,6 +58,26 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package NUMERIC_STD
 -- Compiling entity motorcontrol
 -- Compiling architecture behavioral of motorcontrol
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/robot.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity robot
+-- Compiling architecture structural of robot
+
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/buffer.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity d_flip_flop
+-- Compiling architecture behavioural of d_flip_flop
+-- Compiling entity three_bit_register
+-- Compiling architecture structural of three_bit_register
+-- Compiling entity inputbuffer
+-- Compiling architecture structural of inputbuffer
 
 } {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/timebase.vhdl}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019

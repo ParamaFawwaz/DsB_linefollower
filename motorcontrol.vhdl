@@ -30,7 +30,6 @@ architecture behavioral of motorcontrol is
 		end process;
 	
 	process (state, direction, clk)
-		variable delay : integer;
 	begin
 		case state is
 			when Reset_state =>
