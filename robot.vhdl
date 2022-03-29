@@ -66,7 +66,7 @@ architecture structural of robot is
 		);
 	end component motor_control;
 
-	-- a not on reading signal names. i2c means input_buffer to controller. mL is motor left
+	-- a note on reading signal names. i2c means input_buffer to controller. mL is motor left
 	signal i2c_sensor_l, i2c_sensor_m, i2c_sensor_r : std_logic;
 	
 	signal c2mL_reset, c2mL_direction : std_logic;
@@ -103,13 +103,13 @@ architecture structural of robot is
 							
 
 		lbl_motorcontrol_L: motor_control port map( clk			=> clk,
-							reset		=> reset,
+							reset		=> c2mL_reset,
 							direction 	=> c2mL_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_l_pwm);
 		
 		lbl_motorcontrol_R: motor_control port map( clk			=> clk,
-							reset		=> reset,
+							reset		=> c2mL_reset,
 							direction 	=> c2mR_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_r_pwm);

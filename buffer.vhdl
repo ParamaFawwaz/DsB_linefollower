@@ -92,12 +92,12 @@ architecture structural of inputbuffer is
         );
     end component three_bit_register;
 
-    signal C1, C2, C3, C_clk : std_logic;
+    signal C1, C2, C3: std_logic;
 
     begin
-        lbl4: three_bit_register port map (clk => C_clk, A1 => sensor_l_in, A2=> sensor_m_in, A3 =>sensor_r_in,
+        lbl4: three_bit_register port map (clk => clk, A1 => sensor_l_in, A2=> sensor_m_in, A3 =>sensor_r_in,
                                             B1 => C1, B2=> C2, B3 => C3);
-        lbl5: three_bit_register port map (clk => C_clk, A1 => C1, A2 => C2, A3=>C3, 
+        lbl5: three_bit_register port map (clk => clk, A1 => C1, A2 => C2, A3=>C3, 
                                             B1=>sensor_l_out, B2 => sensor_m_out, B3 => sensor_r_out);
 
         
