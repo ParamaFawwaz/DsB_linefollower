@@ -32,13 +32,23 @@ begin
                 '1' after 10 ns when clk /= '1' else '0' after 10 ns;
 
     sensor_L <= '0' after 0 ns,
-                '1' after 15 ns,
-                '0' after 21 ns,
-                '1' after 24 ns,
+                '1' after 10 ns,
+                '0' after 15 ns,
+                '1' after 20 ns,
                 '0' after 25 ns,
-                '1' after 35 ns;
-    sensor_M <= '0' after 0 ns;
-    sensor_R <= '0' after 0 ns;
+                '1' after 30 ns,
+                '0' after 35 ns,
+                '1' after 40 ns;
+
+    sensor_M <= '0' after 0 ns,
+                '1' after 10 ns,
+                '0' after 20 ns,
+                '1' after 30 ns,
+                '0' after 40 ns;
+
+    sensor_R <= '0' after 0 ns,
+                '1' after 20 ns,
+                '0' after 40 ns;
 
 end architecture structural;
 
