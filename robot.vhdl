@@ -16,7 +16,7 @@ end entity robot;
 
 architecture structural of robot is
 
-	component input_buffer is
+	component inputbuffer is
 		port (	clk		: in	std_logic;
 
 		sensor_l_in	: in	std_logic;
@@ -27,7 +27,7 @@ architecture structural of robot is
 		sensor_m_out	: out	std_logic;
 		sensor_r_out	: out	std_logic
 		);
-	end component input_buffer;
+	end component inputbuffer;
 
 	component controller is
 		port (	clk			: in	std_logic;
@@ -56,7 +56,7 @@ architecture structural of robot is
 		);
 	end component timebase;
 
-	component motor_control is
+	component motorcontrol is
 		port (	clk		: in	std_logic;
 		reset		: in	std_logic;
 		direction	: in	std_logic;
@@ -64,7 +64,7 @@ architecture structural of robot is
 
 		pwm		: out	std_logic
 		);
-	end component motor_control;
+	end component motorcontrol;
 
 	-- a note on reading signal names. i2c means input_buffer to controller. mL is motor left
 	signal i2c_sensor_l, i2c_sensor_m, i2c_sensor_r : std_logic;
@@ -76,7 +76,7 @@ architecture structural of robot is
 	signal timebase_count : std_logic_vector(19 downto 0);
 
 	begin
-		lbl_inbuf: input_buffer port map (clk 		=> clk, 
+		lbl_inbuf: inputbuffer port map (clk 		=> clk, 
 								sensor_l_in => sensor_l_in, 
 								sensor_m_in => sensor_m_in, 
 								sensor_r_in => sensor_r_in,
@@ -102,14 +102,14 @@ architecture structural of robot is
 								count_out 	=> timebase_count);
 							
 
-		lbl_motorcontrol_L: motor_control port map( clk			=> clk,
+		lbl_motorcontrol_L: motorcontrol port map( clk			=> clk,
 							reset		=> c2mL_reset,
 							direction 	=> c2mL_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_l_pwm);
 		
-		lbl_motorcontrol_R: motor_control port map( clk			=> clk,
-							reset		=> c2mL_reset,
+		lbl_motorcontrol_R: motorcontrol port map( clk			=> clk,
+							reset		=> c2mR_reset,
 							direction 	=> c2mR_direction,
 							count_in 	=> timebase_count,
 							pwm 		=> motor_r_pwm);

@@ -31,7 +31,7 @@ architecture behavioral of controller is
 
 		process(clk)
 			begin
-			if(clk'event and clk = '1' and to_integer(unsigned(count_in)) = 0) then 
+			if(clk'event and clk = '1') then 
 				if(reset = '1') then
 					state <= reset_state;
 				else
@@ -41,7 +41,7 @@ architecture behavioral of controller is
 		end process;
 		
 			
-		process(state)
+		process(state, count_in, sensor_l, sensor_m, sensor_r)
 			begin
 			case state is
 				when reset_state =>
@@ -84,7 +84,11 @@ architecture behavioral of controller is
 
 					count_reset <= '0';
 
-					next_state <= reset_state;
+					if(to_integer(unsigned(count_in)) > 999999) then
+						next_state <= reset_state;
+					else
+						next_state <= gentle_left;
+					end if;
 
 				when sharp_left =>
 					--motor left is going backwards
@@ -96,7 +100,11 @@ architecture behavioral of controller is
 
 					count_reset <= '0';
 
-					next_state <= reset_state;
+					if(to_integer(unsigned(count_in)) > 999999) then
+						next_state <= reset_state;
+					else
+						next_state <= sharp_left;
+					end if;
 
 				when gentle_right =>
 					--motor left is going forwards
@@ -108,7 +116,11 @@ architecture behavioral of controller is
 
 					count_reset <= '0';
 
-					next_state <= reset_state;
+					if(to_integer(unsigned(count_in)) > 999999) then
+						next_state <= reset_state;
+					else
+						next_state <= gentle_right;
+					end if;
 
 				when sharp_right =>
 					--motor left is going forwards
@@ -120,7 +132,11 @@ architecture behavioral of controller is
 
 					count_reset <= '0';
 
-					next_state <= reset_state;
+					if(to_integer(unsigned(count_in)) > 999999) then
+						next_state <= reset_state;
+					else
+						next_state <= sharp_right;
+					end if;
 
 				when forward =>
 					-- motor left is forwards
@@ -132,8 +148,12 @@ architecture behavioral of controller is
 
 
 					count_reset <= '0';
-
-					next_state <= reset_state;
+					
+					if(to_integer(unsigned(count_in)) > 999999) then
+						next_state <= reset_state;
+					else
+						next_state <= forward;
+					end if;
 
 			end case;
 		end process;
