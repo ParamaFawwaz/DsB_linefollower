@@ -61,6 +61,15 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity robot_tb
 -- Compiling architecture structural of robot_tb
 
+} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/controller.vhdl}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture behavioral of controller
+
 } {} {}} D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl {1 {vcom -work work -2002 -explicit -vopt -stats=none D:/schoolprogramfiles/git/linefollower/motorcontrol.vhdl
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
@@ -103,14 +112,5 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package NUMERIC_STD
 -- Compiling entity timebase
 -- Compiling architecture behavioural of timebase
-
-} {} {}} {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/Paul/Documents/BSc EE/EE1D21/EE1D21 Line Follower/LineFollowerGit/motorcontrol.vhdl}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity motorcontrol
--- Compiling architecture behavioral of motorcontrol
 
 } {} {}}
