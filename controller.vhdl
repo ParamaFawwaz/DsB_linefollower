@@ -24,7 +24,6 @@ end entity controller;
 architecture behavioral of controller is
     type controller_state is (reset_state, gentle_left, sharp_left, gentle_right, sharp_right, forward);
     signal state, next_state : controller_state;
-	signal sensor_vector : std_logic_vector(1 downto 0);
 
     begin
 		
@@ -47,7 +46,7 @@ architecture behavioral of controller is
 				when reset_state =>
 					--motor left is stationary
 					motor_l_reset <= '1';
-					motor_l_direction <= '0';  -- for synthesizing. Henceforth denoted as 'dummy'
+					motor_l_direction <= '1';  -- for synthesizing. Henceforth denoted as 'dummy'
 					
 					--motor
 					motor_r_reset <= '1';
@@ -77,10 +76,10 @@ architecture behavioral of controller is
 				when gentle_left =>
 					--motor left is stationary
 					motor_l_reset <= '1';
-					motor_r_direction <= '0';   --dummy
+					motor_l_direction <= '0';   --dummy
 					--motor right is going forward
 					motor_r_reset <= '0';
-					motor_r_direction <= '1';
+					motor_r_direction <= '0';
 
 					count_reset <= '0';
 
@@ -96,7 +95,7 @@ architecture behavioral of controller is
 					motor_l_direction <= '0';
 					--motor right is going forwards
 					motor_r_reset <= '0';
-					motor_r_direction <= '1';
+					motor_r_direction <= '0';
 
 					count_reset <= '0';
 
@@ -128,7 +127,7 @@ architecture behavioral of controller is
 					motor_l_direction <= '1';
 					--motor right is going backwards
 					motor_r_reset <= '0';
-					motor_r_direction <= '0';
+					motor_r_direction <= '1';
 
 					count_reset <= '0';
 
@@ -144,7 +143,7 @@ architecture behavioral of controller is
 					motor_l_direction <= '1';
 					-- motor right is forwards
 					motor_r_reset <= '0';
-					motor_r_direction <= '1';
+					motor_r_direction <= '0';
 
 
 					count_reset <= '0';

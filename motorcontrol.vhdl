@@ -34,9 +34,11 @@ architecture behavioral of motorcontrol is
 		case state is
 			when Reset_state =>
 			new_state <= high;
-				pwm <= '0';
+			pwm <= '0';
+
 			when  low =>
 				pwm <= '0';
+				new_state <= low;
 
 		
 			when  high =>
