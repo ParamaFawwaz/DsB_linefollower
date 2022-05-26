@@ -18,7 +18,7 @@ begin
 	process (clk) -- register
 	begin
 		if(clk'event and clk = '1') then
-			if(reset = '1') then
+			if(reset = '1' and next_count <= 1000000) then
 				count <= (others=> '0');
 			else
 				count <= next_count;
