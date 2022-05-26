@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity testbench is
-end entity testbench;
+entity timebase_tb is
+end entity timebase_tb;
 
-architecture structural of testbench is
+architecture structural of timebase_tb is
     component timebase is
         port(   clk     : in std_logic;
                 reset   : in std_logic;
@@ -22,8 +22,8 @@ begin
         reset   <=  '1' after 0 ns, 
                     '0' after 10 ns,
                     '1' after 20 ns, --to test if reset will not affect it 
-                    '0' after 30 ns,
-                    '1' after 800000 ns; -- to test if reset works after at a later point in time
+                    '0' after 30 ns;
+                   
 
 lbl:    timebase port map (     clk => clk,
                                 reset => reset,

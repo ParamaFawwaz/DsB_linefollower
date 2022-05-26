@@ -37,7 +37,7 @@ architecture structural of robot is
 		sensor_m		: in	std_logic;
 		sensor_r		: in	std_logic;
 
-		count_in		: in	std_logic_vector (19 downto 0);  -- counts every 20 ns
+		count_in		: in	std_logic_vector (20 downto 0);  -- counts every 20 ns
 		count_reset		: out	std_logic; --send to the timebase every 20ms, ie when count_in = 10^6
 
 		motor_l_reset		: out	std_logic;
@@ -52,7 +52,7 @@ architecture structural of robot is
 		port (	clk		: in	std_logic; -- every 20ns
 		reset		: in	std_logic; -- reset every 20 ms
 
-		count_out	: out	std_logic_vector (19 downto 0)  -- 20ms/20ns = 10^6 < 2^20
+		count_out	: out	std_logic_vector (20 downto 0)  -- 20ms/20ns = 10^6 < 2^20
 		);
 	end component timebase;
 
@@ -60,7 +60,7 @@ architecture structural of robot is
 		port (	clk		: in	std_logic;
 		reset		: in	std_logic;
 		direction	: in	std_logic;
-		count_in	: in	std_logic_vector (19 downto 0);
+		count_in	: in	std_logic_vector (20 downto 0);
 
 		pwm		: out	std_logic
 		);
@@ -73,7 +73,7 @@ architecture structural of robot is
 	signal c2mR_reset, c2mR_direction : std_logic;
 	signal c2t_reset : std_logic;
 
-	signal timebase_count : std_logic_vector(19 downto 0);
+	signal timebase_count : std_logic_vector(20 downto 0);
 
 	begin
 		lbl_inbuf: inputbuffer port map (clk 		=> clk, 

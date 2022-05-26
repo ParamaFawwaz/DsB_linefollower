@@ -10,7 +10,7 @@ entity controller is
 		sensor_m		: in	std_logic;
 		sensor_r		: in	std_logic;
 
-		count_in		: in	std_logic_vector (19 downto 0);  -- counts every 20 ns
+		count_in		: in	std_logic_vector (20 downto 0);  -- counts every 20 ns
 		count_reset		: out	std_logic; --send to the timebase every 20ms, ie when count_in = 10^6
 
 		motor_l_reset		: out	std_logic;
@@ -52,8 +52,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '1';
 					motor_r_direction <= '1'; --dummy
 
-					count_reset <= '1'; -- reset timebase
-
+				
 					if (sensor_l = '0' and sensor_m = '0' and sensor_r = '0') then
 						next_state <= forward;
 					elsif (sensor_l = '0' and sensor_m = '0' and sensor_r = '1') then
@@ -81,7 +80,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '0';
 					motor_r_direction <= '0';
 
-					count_reset <= '0';
+	
 
 					if(to_integer(unsigned(count_in)) > 999999) then
 						next_state <= reset_state;
@@ -97,7 +96,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '0';
 					motor_r_direction <= '0';
 
-					count_reset <= '0';
+		
 
 					if(to_integer(unsigned(count_in)) > 999999) then
 						next_state <= reset_state;
@@ -113,7 +112,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '1';
 					motor_r_direction <= '0'; --dummy
 
-					count_reset <= '0';
+
 
 					if(to_integer(unsigned(count_in)) > 999999) then
 						next_state <= reset_state;
@@ -129,7 +128,7 @@ architecture behavioral of controller is
 					motor_r_reset <= '0';
 					motor_r_direction <= '1';
 
-					count_reset <= '0';
+			
 
 					if(to_integer(unsigned(count_in)) > 999999) then
 						next_state <= reset_state;
@@ -144,10 +143,9 @@ architecture behavioral of controller is
 					-- motor right is forwards
 					motor_r_reset <= '0';
 					motor_r_direction <= '0';
-
-
-					count_reset <= '0';
 					
+
+
 					if(to_integer(unsigned(count_in)) > 999999) then
 						next_state <= reset_state;
 					else
